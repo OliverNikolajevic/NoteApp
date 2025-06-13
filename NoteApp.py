@@ -20,10 +20,8 @@ class NoteApp:
         self.setup_gui()
 
     def setup_gui(self):
-        # Горен дел со копчиња
         button_frame = tk.Frame(self.root)
         button_frame.pack(pady=10)
-
         tk.Button(button_frame, text="Креирај", command=self.create_note).grid(row=0, column=0, padx=5)
         tk.Button(button_frame, text="Уреди", command=self.edit_note).grid(row=0, column=1, padx=5)
         tk.Button(button_frame, text="Избриши", command=self.delete_note).grid(row=0, column=2, padx=5)
