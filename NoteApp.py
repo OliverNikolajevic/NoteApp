@@ -28,13 +28,9 @@ class NoteApp:
         tk.Button(button_frame, text="Уреди", command=self.edit_note).grid(row=0, column=1, padx=5)
         tk.Button(button_frame, text="Избриши", command=self.delete_note).grid(row=0, column=2, padx=5)
         tk.Button(button_frame, text="Сортирај по датум", command=self.sort_notes).grid(row=0, column=3, padx=5)
-
-        # Листа со белешки
         self.note_listbox = tk.Listbox(self.root, width=50)
         self.note_listbox.pack(pady=5)
         self.note_listbox.bind('<<ListboxSelect>>', self.display_note)
-
-        # Приказ на белешката
         self.note_text = tk.Text(self.root, height=12, width=50, wrap="word")
         self.note_text.pack(pady=5)
 
